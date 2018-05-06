@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 20180505210424) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "about"
-    t.time "start_time"
-    t.time "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string "location_name"
     t.string "address"
-    t.float "price"
-    t.string "ticket_url"
     t.float "latitude"
     t.float "longitude"
+    t.float "price"
+    t.string "ticket_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

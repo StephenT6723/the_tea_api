@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt',         '3.1.11'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'fast_jsonapi'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
