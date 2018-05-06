@@ -1,6 +1,6 @@
 Time.zone = 'EST'
 
-3.times do |n|
+100.times do |n|
 
 @start = Time.parse("7:30PM")
 @start = @start + n.days
