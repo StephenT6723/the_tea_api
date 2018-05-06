@@ -9,7 +9,13 @@ class EventsController < ApplicationController
 	#end
 
 	def index
-    	@events = Event.all
+		defaultDays = 7
+    	@days = params.has_key?(:days) ? params[:days].to_i: defaultDays
+    	startDate = DateTime.now
+    	endDate = startDate + @days - 1.days
+    	endDate = endDate.end_of_day
+    	@events = Event.where(:start_time => startDate..endDate)
+
     	json_data = EventSerializer.new(@events).serialized_json
     	respond_to do |format|
       		format.json { render json: json_data }

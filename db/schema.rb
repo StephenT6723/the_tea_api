@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180505210424) do
     t.string "ticket_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["start_time", "name"], name: "index_events_on_start_time_and_name"
   end
 
 end
