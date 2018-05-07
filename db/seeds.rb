@@ -1,4 +1,4 @@
-Time.zone = 'EDT'
+Time.zone = 'EST'
 
 100.times do |n|
 
