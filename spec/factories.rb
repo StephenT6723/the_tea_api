@@ -1,4 +1,7 @@
 FactoryBot.define do
+  factory :user do
+    
+  end
 	factory :event do
 		name "Happy Hour"
 		start_time DateTime.now.beginning_of_day
