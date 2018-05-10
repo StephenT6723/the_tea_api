@@ -17,6 +17,7 @@ class EventLocationValidator < ActiveModel::Validator
 end
 
 class Event < ApplicationRecord
+	belongs_to :user
 	default_scope -> { order(start_time: :asc) }
 	validates :name,  presence: true, length: { maximum: 90 }
 	validates :start_time,  presence: true
@@ -25,4 +26,5 @@ class Event < ApplicationRecord
 	validates :address, length: { maximum: 90 }
 	validates_with EventTimeValidator
 	validates_with EventLocationValidator
+	validates :user_id, presence: true
 end

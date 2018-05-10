@@ -1,3 +1,7 @@
+user = User.create!( 	email: "frontdesk@thegayagenda.com",
+						username: "TGA Admin",
+             			password: "temp1password123")
+
 Time.zone = 'EST'
 
 100.times do |n|
@@ -6,7 +10,7 @@ Time.zone = 'EST'
 	@start = @start + n.days
 	@end = @start + 2.hours
 
-	Event.create(name: "#{Faker::RuPaul.queen} Presents: #{Faker::RuPaul.quote}",
+	user.events.create!(name: "#{Faker::RuPaul.queen} Presents: #{Faker::RuPaul.quote}",
 		about:Faker::Hipster.paragraph(6),
 		start_time: @start,
 		end_time: @end,
@@ -18,7 +22,7 @@ Time.zone = 'EST'
 	@start = @start + 1.hours
 	@end = @end + 1.hours
 
-	Event.create(name: "Sexy #{Faker::Company.profession.capitalize}",
+	user.events.create!(name: "Sexy #{Faker::Company.profession.capitalize}",
 		about:Faker::Hipster.paragraphs(3),
 		start_time: @start,
 		location_name: "Hardware Bar",
@@ -29,7 +33,7 @@ Time.zone = 'EST'
 	@start = @start + 1.hours
 	@end = @end + 1.hours
 
-	Event.create(name: "#{Faker::Hipster.words.first.capitalize} and Chill",
+	user.events.create!(name: "#{Faker::Hipster.words.first.capitalize} and Chill",
 		about:Faker::Hipster.paragraph(6),
 		start_time: @start,
 		location_name: "Nowhere Bar",
@@ -37,7 +41,7 @@ Time.zone = 'EST'
 		latitude: 40.7317696,
 		longitude: -73.9841161)
 
-	Event.create(name: "#{Faker::RuPaul.queen} Presents: #{Faker::RuPaul.quote}",
+	user.events.create!(name: "#{Faker::RuPaul.queen} Presents: #{Faker::RuPaul.quote}",
 		about:Faker::Hipster.paragraph(6),
 		start_time: @start,
 		end_time: @end,
@@ -46,7 +50,7 @@ Time.zone = 'EST'
 		latitude: 40.7338326,
 		longitude: -74.0021626)
 
-	Event.create(name: "Thirsty #{Faker::Company.profession.capitalize}",
+	user.events.create!(name: "Thirsty #{Faker::Company.profession.capitalize}",
 		about:Faker::Hipster.paragraph(6),
 		start_time: @start,
 		end_time: @end,
