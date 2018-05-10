@@ -7,5 +7,5 @@ Rails.application.routes.draw do
    		#root 'devise/sessions#new'
   	#end
   	root 'static_pages#home'
-	get '/events', to: 'events#index'
+	resources :events,          only: [:create, :index]
 end
